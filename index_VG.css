@@ -28,6 +28,28 @@ header h1 {
     padding: 20px;
 }
 
+nav {
+    display: flex;
+    gap: 5px;
+    margin: 50px 20px;
+}
+
+
+nav div {
+    flex-grow: 1;
+    background-color: rgba(181, 181, 181, 0.9);
+    color: black;
+    text-align: center;
+    font-size: 2vw;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+.marked {
+    border: 1px solid white;
+    box-shadow: 0px 0px 7px white;
+}
+
 .album_data h1 {
     font-family: "Bungee Outline";
 }
