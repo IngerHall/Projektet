@@ -25,7 +25,7 @@ article {
 
 header h1 {
     font-family: "Bungee Shade";
-    font-size: 6.5vw;
+    font-size: 6vw;
     padding: 20px;
 }
 
@@ -34,7 +34,7 @@ nav {
     gap: 5px;
     margin: 50px 20px;
     
-    /* cursor: pointer; */
+    cursor: pointer;
 }
 
 nav div {
@@ -49,15 +49,18 @@ nav div {
 
 nav div:hover {
     background-color: rgba(0, 0, 0, 0.4);
+    color: white;
 }
 
 .marked:hover {
     background-color: rgba(181, 181, 181, 0.9);
+    color: black;
 }
 
 .marked {
     border: 1px solid white;
     box-shadow: 0px 0px 7px white;
+    font-weight: bold;
 
     cursor: auto;
 }
@@ -70,12 +73,33 @@ nav div:hover {
     gap: 10px;
 }
 
-.album_data h1 {
-    font-family: "Bungee Outline";
-}
-
 .album_data {
     font-size: 1.5vw;
+    padding: 10px;
+}
+
+.album_data h1 {
+    font-size: 3vw;
+    font-family: "Bungee Outline";
+    margin: 0px;
+}
+
+.album_data h2 {
+    margin: 0px;
+    margin-bottom: 30px;
+}
+
+.album_data ul {
+    list-style-type: none;
+    margin-top: 0px;
+}
+
+.album_data p {
+    margin-bottom: 0px;
+}
+
+.album_description {
+    margin-top: 30px;
 }
 
 .cover {
@@ -98,11 +122,13 @@ img {
 
 .show_not_hover_1 {
     position: relative;
-
     object-fit: contain;
     opacity: 1;
 
     background-color: rgb(247, 235, 211);
+
+    transition-property: all;
+    transition-duration: 1s;
 }
 
 .show_not_hover_1:hover {
@@ -197,7 +223,7 @@ img {
     grid-column: 5;
 }
 
-.image {
+.image_1 {
     color: black;
 }
 
@@ -227,6 +253,9 @@ img {
 
     object-fit: contain;
     opacity: 1;
+
+    transition-property: all;
+    transition-duration: 1s;
 }
 
 .show_not_hover_2:hover {
@@ -274,6 +303,8 @@ img {
     align-items: end;
 
     grid-column: 4 / span 2;
+
+    color: white;
 }
 
 .bottom_right_2 {
@@ -287,6 +318,32 @@ footer {
     margin-top: 50px;
 }
 
+@media (min-width: 1111px) {
+
+    header h1 {
+        font-size: 70px;
+    }
+
+    nav div {
+        font-size: 20px;
+    }
+
+    .album_data {
+        font-size: 15px;
+    }
+
+    .album_data h1 {
+        font-size: 25px;
+    }
+
+    .side_one_1, .side_two_1 {
+        font-size: 15px;
+    }
+
+    .anecdotes > li {
+        font-size: 20px;
+    }
+}
 /* Tablet */
 
 @media (max-width: 800px) {
@@ -296,21 +353,22 @@ footer {
     }
 
     header h1 {
-        font-size: 80px;
+        font-size: 9vw;
         text-align: center;
     }
 
     nav div {
-        font-size: 17px;
+        font-size: 3vw;
     }
 
     .album_data {
         grid-row: 2;
-        font-size: 17px;
+        grid-column: 1 / span 2;
+        font-size: 2vw;
     }
 
     .album_data h1 {
-        font-size: 30px;
+        font-size: 4vw;
     }
 
     .cover {
@@ -320,6 +378,10 @@ footer {
     img {
         border-radius: 15px 0px 0px 15px;
         background-color: rgb(42, 72, 132);
+    }
+
+    .show_hover_1 {
+        background-color: rgb(235, 99, 75);
     }
 
     nav div:hover {
@@ -334,11 +396,11 @@ footer {
     }
 
     .song_list h2 {
-        font-size: 25px;
+        font-size: 3vw;
     }
 
     .song_list ul {
-        font-size: 15px;
+        font-size: 2vw;
     }
 
     .show_not_hover_1:hover {
@@ -356,7 +418,7 @@ footer {
     }
 
     .anecdotes li {
-        font-size: 15px;
+        font-size: 2vw;
     }
 
     .bottom_left_1 {
@@ -396,13 +458,17 @@ footer {
 
 @media (max-width: 500px) {
 
+    body {
+        background-image: url("phone/background_phone.jpg");
+    }
+
     .container {
         margin: 10px;
         background-color: rgba(0, 0, 0, 0);
     }
 
     header h1 {
-        font-size: 60px;
+        font-size: 12vw;
         padding: 0px;
     }
 
@@ -411,7 +477,7 @@ footer {
     }
 
     nav > div {
-        font-size: 17px;
+        font-size: 4vw;
     }
 
     article {
@@ -421,18 +487,20 @@ footer {
     .best {
         display: grid;
         grid-template-columns: 1fr;
+
+        padding: 10px 0px 10px 10px;
     }
 
     .album_data h1 {
-        font-size: 30px;
+        font-size: 5vw;
     }
 
     .album_data h2 {
-        font-size: 22px;
+        font-size: 3vw;
     }
 
     .album_data {
-        font-size: 20px;
+        font-size: 4vw;
     }
 
     .song_list {
@@ -443,11 +511,11 @@ footer {
     }
 
     .song_list h2 {
-        font-size: 25px;
+        font-size: 5vw;
     }
 
     .song_list ul {
-        font-size: 15px;
+        font-size: 3vw;
     }
 
     .album_data {
@@ -469,7 +537,7 @@ footer {
     }
 
     .anecdotes li {
-        font-size: 17px;
+        font-size: 3vw;
     }
 
     .bottom_left_1 {
